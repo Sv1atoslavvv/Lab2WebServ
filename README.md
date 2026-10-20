@@ -13,8 +13,9 @@ ASP.NET Core MVC застосунок із окремою DLL-бібліотек
 Потрібен .NET 10 SDK. Із кореня solution:
 
 ```powershell
-dotnet restore .\EmailSenderLab2.sln
-dotnet run --project .\EmailSenderWeb\EmailSenderWeb.csproj
+dotnet restore .\EmailSenderLab2.sln -m:1
+dotnet build .\EmailSenderLab2.sln --no-restore -m:1
+dotnet run --project .\EmailSenderWeb\EmailSenderWeb.csproj --no-build
 ```
 
 ## Налаштування Gmail
